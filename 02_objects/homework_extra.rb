@@ -1,3 +1,27 @@
+class Story
+  attr_accessor :title, :category 
+  def initialize title, category
+    @title = title
+    @category = category
+  end
+
+  def upvote
+    upvotes
+    @votes = @votes + 1
+  end
+
+  def downvote
+    upvotes 
+    @votes = @votes - 1
+  end
+
+  def upvotes
+  instance_variable_set(:@votes, 1) if instance_variable_defined?(:@votes) == false
+  @votes
+  end
+
+end
+
 require 'minitest/autorun'
 
 ### Write your code above the tests ###
@@ -9,7 +33,7 @@ describe Story do
   end
 
   it "has its upvotes set to 1 by default" do
-    story = Story.new "Wombat sees dentist after 10 year hiatus", "Nature"
+    story = Story.new "Wombat sees de  ntist after 10 year hiatus", "Nature"
     story.upvotes.must_equal  1
   end
 
