@@ -1,25 +1,3 @@
-class Story
-  attr_accessor :title, :category, :upvotes 
-  def initialize title, category
-    @title = title
-    @category = category
-    @upvotes = 1
-  end
-  
-  def upvote
-    @upvotes = @upvotes + 1
-  end
-
-  def downvote
-    @upvotes = @upvotes - 1
-  end
-
-  def upvotes
-    @upvotes
-  end
-
-end
-
 require 'minitest/autorun'
 
 ### Write your code above the tests ###

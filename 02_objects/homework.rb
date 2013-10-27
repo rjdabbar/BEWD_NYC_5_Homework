@@ -1,19 +1,3 @@
-class Person 
-  attr_accessor :name, :profession
-  def initialize name, profession
-  	@name = name
-  	@profession = profession
-  end
-
-  def introduce
-  	"Hi! My name is #{@name}. I'm a #{@profession}"
-  end
-
-  def introduce_from_across_the_room
-  	introduce.upcase
-  end
-end
-
 require 'minitest/autorun'
 
 describe Person do 
