@@ -1,5 +1,5 @@
   class Person
-    def initalize name, profession
+    def initialize name, profession
       @name = name
       @profession = profession
     end 
