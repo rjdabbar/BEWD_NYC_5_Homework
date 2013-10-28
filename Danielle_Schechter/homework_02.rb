@@ -3,6 +3,7 @@ require 'minitest/autorun'
 class Person
 	attr_accessor :person
 	attr_accessor :profession
+	
 	def initialize person, profession
 		@person = person
 		@profession = profession
