@@ -1,5 +1,28 @@
 require 'minitest/autorun'
 
+class Story
+  attr_accessor :title, :category, :upvotes
+def initialize title, category
+
+  @title = title
+  @category = category
+  @upvotes = 1
+
+end
+
+def upvote
+@upvotes += 1
+end
+
+def downvote
+@upvotes -= 1
+end
+
+
+
+
+end
+
 ### Write your code above the tests ###
 describe Story do 
   it "requires a title and a category on initialization" do
